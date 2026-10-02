@@ -1,0 +1,27 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Compile and run on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile all oppgaver (-Wall -Wextra)
+        run: make
+
+      - name: Run each program
+        run: |
+          echo "== Oppgave 1 =="
+          ./oppgave1-argumenter/hilsen Talha Kari
+          echo "== Oppgave 2 =="
+          ./oppgave2-pekere/snu_tekst Kristiania
+          echo "== Oppgave 3 =="
+          ./oppgave3-structs-liste/handleliste
+          echo "== Oppgave 4 =="
+          printf "hei fra\nc for linux\n" > test.txt
+          ./oppgave4-filbehandling/ordtelling test.txt
+          echo "== Oppgave 5 =="
+          ./oppgave5-prosesser/prosess

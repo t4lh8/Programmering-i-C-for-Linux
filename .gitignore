@@ -1,0 +1,9 @@
+# Kompilerte programmer og objektfiler
+oppgave1-argumenter/hilsen
+oppgave2-pekere/snu_tekst
+oppgave3-structs-liste/handleliste
+oppgave4-filbehandling/ordtelling
+oppgave5-prosesser/prosess
+*.o
+*.out
+test.txt
